@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Snippet 设置</title>
+    <style>
+    body {
+        font-family: 'Segoe UI',Arial,'Microsoft Yahei',sans-serif;
+        font-size: 75%;
+    }
+    .main {
+        padding: 0 20px;
+    }
+    h2,h3 {
+        margin-bottom: 0.8em;
+        -webkit-margin-start: -18px;
+        -webkit-user-select: none;
+        line-height: 1;
+    }
+    h3 {
+        font-size: 1.2em;
+        margin-top: 2em;
+    }
+    .form-row {
+        display: block;
+        margin: 0.65em 0;
+    }
+    input[type='text'], textarea {
+        border: 1px solid #bfbfbf;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: #444;
+        font: inherit;
+        margin: 0;
+        min-height: 2em;
+        padding: 3px;
+        outline: none;
+        padding-bottom: 4px;
+    }
+    textarea {
+        margin-top: 0.5em;
+    }
+    table {
+        width: 50em;
+    }
+    td, th {
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        padding: 0.5em;
+    }
+    td span, #del-all {
+        color: rgb(17, 85, 204);
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Snippet 设置</h2>
+        <p>使用方法：在文本框中输入“空格+触发补全字符串”，按下Tab键即可补全。</p>
+        <h3>添加Snippet</h3>
+        <form id="add-form">
+            <div class="form-row">
+                <span>触发补全字符串（不能含有空格）：</span>
+                <input type="text" name="tab-trigger" id="tab-trigger">
+            </div>
+            <div class="form-row">
+                <span>完整文本内容：</span>
+                <br/>
+                <textarea name="content" cols="80" rows="3" id="content"></textarea>
+            </div>
+            <button type="submit">添加</button>
+        </form>
+        <h3>管理Snippets</h3>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th width="120">触发补全字符串</th>
+                    <th>完整文本内容</th>
+                    <th width="50"><span id="del-all">全部删除</span></th>
+                </tr>
+            </thead>
+            <tbody id="list-table">
+            </tbody>
+        </table>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+#sp_msg_box_haha {position: fixed;top: 40%;left: 50%;width: 200px;padding: 20px;margin-left: -100px; background-color: #fff;box-shadow: 0 0 5px #ccc;display: none;}
+#sp_msg_close {position: absolute;top: 0;right: 0;width:30px;height:30px; line-height: 30px; text-align:center;font-size:14px;font-weight: bold;color:#444;cursor: pointer;}
+#sp_msg_haha {font-size: 14px;text-align: center;}
+#sp_text_haha {font-size: 12px;}
